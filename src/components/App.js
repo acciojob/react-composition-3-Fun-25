@@ -18,17 +18,20 @@ function Tooltip({ hover, setHoverEffect }) {
   }
   return (
     <div>
-      <div className="tooltiptext">
+      <h2 className="tooltiptext" onMouseOver={() => handleHover(1)}>
+      
         {hover.id == 1 && <div>This is a tooltip</div>}
-        <h1 onMouseOver={() => handleHover(1)}>Hover over me</h1>
-      </div>
+        Hover over me
+      </h2>
+
       <hr />
-      <div className="tootip">
+
+      <p className="tooltip" onMouseOver={() => handleHover(2)}>
+       
         {hover.id == 2 && <div>This is another tooltip</div>}
-        <p onMouseOver={() => handleHover(2)}>
-          Hover over me to see another tooltip
-        </p>
-      </div>
+        Hover over me to see another tooltip{" "}
+      </p>
+
       <hr />
     </div>
   );
